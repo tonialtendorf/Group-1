@@ -1,3 +1,11 @@
+
+# Thrifty-Travel
+
+Credits:
+https://www.tailwindawesome.com/resources/tailwind-blog-template
+https://www.tailwindawesome.com/resources/nordic-store
+https://flowbite.com/docs/components/rating/
+
 Thrifty Travel is an application desigined to curate a location from anywhere in the world for our customer to travel.
 
 Thrify Travel project GIVEN I want a vacation destiation custom to my wants and needs.
@@ -13,3 +21,4 @@ WHEN I am shown the choices THEN I can choose my transporation and hotel on an e
 WHEN I select the images THEN they will take me to a link
 
 WHEN I change the size of the page to view on other devices THEN I am displayed with a webpage that can handle multiple screens.
+
