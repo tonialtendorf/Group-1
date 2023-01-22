@@ -1,49 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="./assets/css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Thrifty Travel</title>
 </head>
+
 <body>
     <!--Header-->
     <header class="w-full container mx-auto">
-        <div class="flex flex-col items-center py-12">
-            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+        <div class="flex flex-col">
+            <a class="title" id="title">
                 Thrifty Travel
             </a>
-            <p class="text-lg text-gray-600">
-                Looking to find recommendations for your next trip? Look no further! Fill out the below information to find the best options for your next travel experience!
+            <br>
+            <p class="description" id="description">
+                Looking to find recommendations for your next trip? Look no further! Fill out the information below to
+                find the best options for your next travel experience!
             </p>
         </div>
     </header>
 
-  <!-- Topic Nav -->
-  <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
-    <div class="block sm:hidden">
-        <a
-            href="#"
-            class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
-            @click="open = !open"
-        >
-            Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
-        </a>
-    </div>
-    <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
-        <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Contact Us</a>
-            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">About Us</a>
-            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Instagram</a>
-            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Twitter</a>
-            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Reviews</a>
+    <!-- Topic Nav -->
+    <nav class="nav">
+            <div
+                class="w-full container mx-auto flex flex-col">
+                <a href="#contact" class="contact">Contact Us</a>
+                <a href="#about" class="about">About Us</a>
+                <a href="https://www.instagram.com/_thriftytravel_/" target="_blank" class="social">Instagram</a>
+                <a href="./reviews.html" target="_blank" class="Testimonials">Testimonials</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Travel Questions for API-->
+    <section class="questionsContainer w-full mx-auto flex" id="questionContainer" style="max-width:1600px; height: 32rem; background-image: url('/assets/images/tree.JPG');">
+        <div class="container mx-auto">
+            <div class="flex flex-col w-full">
+                <a class="inline-block" href="#">Click to Start Your Getaway</a>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!--API Results-->
+    <div class="apiOutput grid grid-cols-3" id="apiOutput">
+        <div class="flight" style="height: 100px" id="flight">Flight API</div>
+        <div class="hotel" id="hotel">Hotel API</div>
+        <div class="car" id="car">Rental Car API</div>
+      
+        <!--External travel links-->
+        <div class="linkContainer" style="height: 200px">
+            <a href="https://www.nerdwallet.com/article/travel/saving-money-on-travel-tricks" target="_blank" class="travelTips">
+                <img src="./assets/images/travelimage.jpg" alt="person sitting on rock while hiking"> 
+                <h3>View Budget Saving Travel Tips</h3>
+            </a>
+        </div>
+
+        <div class="topTravel">   
+            <a href="https://www.globalbrandsmagazine.com/travel-destinations-top-10-in-the-world/" target="_blank" class="">
+                <img src="./assets/images/top10.jpg" alt="plane flying over trees and water">
+                <h3>Top 10 Travel Destinations</h3> 
+            </a>
         </div>
     </div>
-</nav>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<br>
+<br>
+
+<!--Contact Us Section-->
+<section class="container mx-auto">
+    <div class="container">
+        <div class="w-full mx-auto flex flex-wrap">
+            <div class="flex w-full">
+                <div>
+                    <h3 class="about" id="about">About Us</h3>
+                    <p class="aboutUs">
+                        We are a four person company wanting to help find YOU the best travel accommodations. If you are looking for a beach vacation, hiking in the mountains, or a relaxing staycation- we have all you need. 
+                    </p>
+                </div>
+            </div>
+            <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+                <div class="">
+                    <h3 class="contact" id="contact">Contact Us</h3>
+                    <ul class="list-reset">
+                        <li>
+                            &#9990; <a class="callUs" target="_blank" href="tel:+15555555555">Call Us</a>
+                            &#128231; <a class="emailUs" href="mailto:thriftytravel@gmail.com">Email Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--footer-->
+    <footer class="footer">
+        <hr>
+        <span class="block">© 2023 <a href="#">Thrifty Travel™</a>. All Rights Reserved.
+        </span>
+    </footer>
+
+
+
+    
+<!--js jquery linked-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="./assets/js/js.script"></script>
+
 </body>
 </html>
+
