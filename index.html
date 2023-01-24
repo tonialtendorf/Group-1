@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,88 +10,94 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Thrifty Travel</title>
 </head>
+
 <body>
     <!--Header-->
-    <header class="w-full container mx-auto">
-        <div class="flex flex-col">
-            <a class="title" id="title">
-                Thrifty Travel
-            </a>
-            <br>
-            <p class="description" id="description">
-                Looking to find recommendations for your next trip? Look no further! Fill out the information below to
-                find the best options for your next travel experience!
-            </p>
-        </div>
-    </header>
+  <header class="w-full container mx-auto">
+    <div class="flex flex-col items-center bg-[#F7E4D6] py-12">
+      <a class="title font-bold text-gray-700 uppercase hover:text-gray-700 text-5xl" id="title">
+        Thrifty Travel
+      </a>
+      <br>
+      <p class="text-lg text-gray-600" id="description">
+        Looking to find recommendations for your next trip? Look no further! Fill out the information below to
+        find the best options for your next travel experience!
+      </p>
+    </div>
+  </header>
     <!-- Topic Nav -->
     <nav class="nav">
+        <nav class="py-4 border-b bg-gray-100">
             <div
-                class="w-full container mx-auto flex flex-col">
-                <a href="#contact" class="contact">Contact Us</a>
-                <a href="#about" class="about">About Us</a>
-                <a href="https://www.instagram.com/_thriftytravel_/" target="_blank" class="social">Instagram</a>
-                <a href="./reviews.html" target="_blank" class="Testimonials">Testimonials</a>
+              class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+              <a href="#contact" class="hover:bg-[#F7E4D6] rounded py-2 px-4 mx-2">Contact Us</a>
+              <a href="#about" class="hover:bg-[#F7E4D6] rounded py-2 px-4 mx-2">About Us</a>
+              <a href="https://www.instagram.com/_thriftytravel_/" target="_blank" class="hover:bg-[#F7E4D6] rounded py-2 px-4 mx-2">Instagram</a>
+              <a href="./reviews.html" target="_blank" class="hover:bg-[#F7E4D6] rounded py-2 px-4 mx-2">Testimonials</a>
             </div>
-        </div>
     </nav>
     <!--Travel Questions for API-->
-    <section class="questionsContainer w-full mx-auto flex" id="questionContainer" style="max-width:1600px; height: 32rem; background-image: url('/assets/images/tree.JPG');">
-        <div class="container mx-auto">
-            <div class="flex flex-col w-full">
-                <a class="inline-block" href="#">Click to Start Your Getaway</a>
-            </div>
-        </div>
-    </section>
-    <br>
+  <section class="questionsContainer w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right" id="questionContainer" style="max-width:1600px; height: 32rem; background-image: url('/assets/images/tree.JPG');">
+    <div class="container mx-auto">
+      <div class="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
+        <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:bg-gray-100 border-black" href="#">Click to Start Your Getaway</a>
+      </div>
+    </div>
+  </section>
+  <br>
     <!--API Results-->
-    <div class="apiOutput grid grid-cols-3" id="apiOutput">
-        <div class="flight" style="height: 100px" id="flight">Flight API</div>
-        <div class="hotel" id="hotel">Hotel API</div>
-        <div class="car" id="car">Rental Car API</div>
-      
-        <!--External travel links-->
-        <div class="linkContainer" style="height: 200px">
-            <a href="https://www.nerdwallet.com/article/travel/saving-money-on-travel-tricks" target="_blank" class="travelTips">
-                <img src="./assets/images/travelimage.jpg" alt="person sitting on rock while hiking"> 
-                <h3>View Budget Saving Travel Tips</h3>
-            </a>
-        </div>
-        <div class="topTravel">   
-            <a href="https://www.globalbrandsmagazine.com/travel-destinations-top-10-in-the-world/" target="_blank" class="">
-                <img src="./assets/images/top10.jpg" alt="plane flying over trees and water">
-                <h3>Top 10 Travel Destinations</h3> 
-            </a>
+    <!--API Results-->
+  <div class="apiOutput grid grid-cols-3 gap-4" id="apiOutput">
+    <div class="flight bg-[#F7E4D6]" style="height: 100px" id="flight">Flight API     
+    </div>
+    <div class="hotel bg-[#F7E4D6]" id="hotel">Hotel API
+        <img src="" >
+    </div>
+    <div class="car bg-[#F7E4D6]" id="car">Rental Car API
+        <img src="" alt="">
+    </div>
+  <!--External travel links-->
+  <div class="linkContainer bg-orange-50" style="height: 200px">
+    <a href="https://www.nerdwallet.com/article/travel/saving-money-on-travel-tricks" target="_blank" class="hover:opacity-75">
+      <img src="./assets/images/travelimage.jpg" alt="person sitting on rock while hiking">
+      <h3>View Budget Saving Travel Tips</h3>
+    </a>
+  </div>
+  <div class="bg-orange-50">
+    <a href="https://www.globalbrandsmagazine.com/travel-destinations-top-10-in-the-world/" target="_blank" class="hover:opacity-75">
+      <img src="./assets/images/top10.jpg" alt="plane flying over trees and water">
+      <h3>Top 10 Travel Destinations</h3>
         </div>
     </div>
-<br>
-<br>
-<!--Contact Us Section-->
-<section class="container mx-auto">
-    <div class="container">
-        <div class="w-full mx-auto flex flex-wrap">
-            <div class="flex w-full">
-                <div>
-                    <h3 class="about" id="about">About Us</h3>
-                    <p class="aboutUs">
-                        We are a four person company wanting to help find YOU the best travel accommodations. If you are looking for a beach vacation, hiking in the mountains, or a relaxing staycation- we have all you need. 
-                    </p>
-                </div>
-            </div>
-            <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
-                <div class="">
-                    <h3 class="contact" id="contact">Contact Us</h3>
-                    <ul class="list-reset">
-                        <li>
-                            &#9990; <a class="callUs" target="_blank" href="tel:+15555555555">Call Us</a>
-                            &#128231; <a class="emailUs" href="mailto:thriftytravel@gmail.com">Email Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <br>
+    <br>
+   <!--Contact Us Section-->
+<section class="container mx-auto bg-white py-8 border-t border-gray-400">
+    <div class="container px-3 py-8 ">
+      <div class="w-full mx-auto flex flex-wrap">
+        <div class="flex w-full lg:w-1/2 ">
+          <div class="px-3 md:px-0">
+            <h3 class="font-bold text-3xl text-gray-900 bg-[#F7E4D6]" id="about">About Us</h3>
+            <p class="py-4 text-xl">
+              We are a four person company wanting to help find YOU the best travel accommodations. If you are looking for a beach vacation, hiking in the mountains, or a relaxing staycation- we have all you need.
+            </p>
+          </div>
         </div>
+        <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+          <div class="">
+            <h3 class="font-bold bg-[#F7E4D6] text-gray-900 text-3xl" id="contact">Contact Us</h3>
+            <ul class="list-reset items-center pt-3">
+              <li>
+                &#9990; <a class="text-xl hover:underline" target="_blank" href="tel:+15555555555">Call Us</a>
+                &#128231; <a class="text-xl hover:underline" href="mailto:thriftytravel@gmail.com">Email Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  <!--footer-->
     <!--footer-->
     <footer class="footer">
         <hr>
@@ -99,10 +106,11 @@
     </footer>
 
 
-    
-<!--js jquery linked-->
+
+    <!--js jquery linked-->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="./assets/js/js.script"></script>
 </body>
+
 </html>
