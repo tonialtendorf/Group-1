@@ -37,42 +37,73 @@
         <a href="./reviews.html" target="_blank" class="hover:bg-[#F7E4D6] rounded py-2 px-4 mx-2">Testimonials</a>
       </div>
     </nav>
-    <!--Travel Questions for API-->
-    <section
-      class="questionsContainer w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
-      id="questionContainer" style="max-width:1600px; height: 32rem; background-image: url('/assets/images/tree.JPG');">
-      <div class="container mx-auto">
-        <div class="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
-          <a class="first tfext-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:bg-gray-100 border-black"
-            href="#">Click to Start Your Getaway</a>
-          <div class="questionContainer">
-            <!-- <div class="q1">
-              <h3> Do you prefer a warm beach or cool mountains?</h3>
-              <ul class="option1">
-                <button class="warm">Warm beach</button>
-                <button class="cool">Cool mountains</button>
-              </ul>
-            </div>
-            <div class="q2">
-              <h3> Are you a thrify traveler or a luxury traveler?</h3>
-              <ul class="option2">
-                <button class="thrifty">Thrifty</button>
-                <button class="luxury">Luxury</button>
-              </ul>
-            </div>
-            <div class="q3">
-              <h3>Do you need accommodations?</h3>
-              <ul class="option3">
-                <button class="yes">Yes please!</button>
-                <button class="no">No, I have a place to stay!</button>
-              </ul>
-            </div> -->
-          </div>
-        </div>
+  </nav>
+    <!--Modal Travel Questionnaire-->
+  <div class="bg-[url('/assets/images/tree.JPG')] mx-auto">
+    <button class="w-full startBtn">Click to begin your getaway</button>
+    <div class="modal hidden">
+        <!--modal-->
+        <div class="">
+            <div class="">
+                <h3 class="">Select your travel preferences below.</h3>
 
-    </section>
-    <br>
-    <!--API Results-->
+            </div>
+            <!--modal body-->
+            <div class="">
+                Do you prefer visiting a warm beach or cool mountains?
+            </div>
+            <div class=""> 
+                <button class="selectWarm">Warm Beach</button>
+                <button class="selectCool">Cool Mountains</button>
+            </div>
+            <div class="">
+                Are you a thrifty traveler or a luxury traveler?
+            </div>
+            <div class=""> 
+                <button class="selectThrifty">Thrifty</button>
+                <button class="selectLuxury">Luxury</button>
+            </div>
+            <div class="">
+                Do you need accommodations?
+            </div>
+            <div class=""> 
+                <button class="selectYes">Yes, please!</button>
+                <button class="selectNo">No, I have a place to stay!</button>
+            </div>
+            <button class="closeModal"></button>
+        </div>
+<!--Modal Bali recommendation-->
+        <div class="bali hidden">
+            <div class="">
+                <h3 class="">Recommended Getaway: Bali, Indonesia</h3>
+                <p class="">The best time to visit the island is in May, June and September when conditions remain warm and sunny, and there are fewer crowds in popular beach resorts.</p>
+            </div>
+        </div>
+<!--Modal Florida recommendation-->
+        <div class="florida hidden">
+            <div class="">
+                <h3 class="">Recommended Getaway: Miami, Florida</h3>
+                <p class="">The best time to visit Florida is in the spring and fall. Both periods offer the best weather with warm temperatures and less rainfall. The south has the best combination of sunny skies, warm waters, and hot temperatures.</p>
+            </div>
+        </div>
+<!--Modal New Zealand recommendation-->
+        <div class="newZealand hidden">
+            <div class="">
+                <h3 class="">Recommended Getaway: Queenstown, New Zealand</h3>
+                <p class="">In July the ski season is in full swing, so this is a fantastic time to visit Queenstown. Even if you're not a skier, these regions are stunning under a dusting of snow</p>
+            </div>
+        </div>
+<!--Modal Colorado recommendation-->
+        <div class="colorado hidden">
+            <div class="">
+                <h3 class="">Recommended Getaway: Denver, Colorado</h3>
+                <p class="">The best time to visit Denver is generally from April through May and September through October. Moderate weather and affordable hotel rates can be expected during these shoulder seasons.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+   <br>
     <!--API Results-->
     <div class="apiOutput grid grid-cols-3 gap-4" id="apiOutput">
       <div class="flight bg-[#F7E4D6]" style="height: 100px" id="flight">Flight API
