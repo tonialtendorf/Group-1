@@ -4,6 +4,12 @@ body{
   margin: 10px;
 }
 
-.plane{
-  height: 130.98px;
+.image-resize{
+  height: 300px;
+  width: 600px;
+  object-fit: cover;
+  object-position: center center;
+  
+  
+  
 }
