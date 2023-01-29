@@ -3,16 +3,10 @@
 body{
   margin: 10px;
 }
-<<<<<<< css_changes
 
 .image-resize{
   height: 300px;
   width: 600px;
   object-fit: cover;
-  object-position: center center;
-  
-  
-  
+  object-position: center center; 
 }
-=======
->>>>>>> main
