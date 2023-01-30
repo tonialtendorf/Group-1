@@ -102,6 +102,122 @@ cool &&
     randomApi()
   });
 
+  //hotel
+ const newZealandHotelApi = document.getElementById('newZealandHotel')
+ const coloradoHotelApi = document.getElementById('coloradoHotel')
+ const floridaHotelApi = document.getElementById('floridaHotel')
+ const baliHotelApi = document.getElementById('baliHotel')
+ 
+ warm && luxury.addEventListener("click", function() {
+   florida.classList.add('hidden')
+   bali.classList.remove('hidden')
+   newZealand.classList.add('hidden')
+   colorado.classList.add('hidden')
+   newZealandHotelApi.classList.add('hidden')
+  coloradoHotelApi.classList.add('hidden')
+
+   randomApi()
+ })
+
+ warm && thrifty.addEventListener("click", function() {
+  florida.classList.remove('hidden')
+  bali.classList.add('hidden')
+  newZealand.classList.add('hidden')
+  colorado.classList.add('hidden')
+  newZealandHotelApi.classList.add('hidden')
+  coloradoHotelApi.classList.add('hidden')
+  randomApi()
+})
+ cool && luxury.addEventListener("click", function() {
+   florida.classList.add('hidden')
+   bali.classList.add('hidden')
+   newZealand.classList.remove('hidden')
+   colorado.classList.add('hidden')
+   newZealandHotelApi.classList.remove('hidden')
+   coloradoHotelApi.classList.add('hidden')
+   randomApi()
+ })
+
+
+ cool && thrifty.addEventListener("click", function() {
+   florida.classList.add('hidden')
+   bali.classList.add('hidden')
+   newZealand.classList.add('hidden')
+   colorado.classList.remove('hidden')
+   coloradoHotelApi.classList.remove('hidden')
+   newZealandHotelApi.classList.add('hidden')
+   randomApi()
+ })
+
+
+//Colorado hotel api response
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': '9fab7aca7fmsh4f68b413d6e9d50p1fad2ajsn5b854ca5116d',
+    'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+  }
+};
+
+
+let coloradoResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?q=denver&locale=en_US&langid=1033&siteid=300000001', options)
+.then(coloradoResponse => coloradoResponse.json())
+.then(coloradoResponse => {
+  console.log(coloradoResponse),
+//.then(response => console.log(response)
+  coloradoHotelApi.innerHTML = `<p>${coloradoResponse.q}</p>`
+  coloradoHotelApi.innerHTML = `<p>${coloradoResponse.sr[4].hotelAddress.street + ". " + coloradoResponse.sr[4].hotelAddress.city + ", "+ coloradoResponse.sr[4].hotelAddress.province}</p>`
+})
+
+//add js here with query selector or get query by id to post it to the hotel tile
+.catch(err => console.error(err))
+
+let newZealandResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?q=queenstown&locale=en_US&langid=1033&siteid=300000001', options)
+.then(newZealandResponse => newZealandResponse.json())
+.then(newZealandResponse => {
+  console.log(newZealandResponse),
+  newZealandHotelApi.innerHTML = `<p>${newZealandResponse.q}</p>`
+   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.sr[8].hotelAddress.street + ". " + newZealandResponse.sr[8].hotelAddress.city}</p>`
+
+
+})
+
+//add js here with query selector or get query by id to post it to the hotel tile
+.catch(err => console.error(err))
+
+
+//florida hotel response
+
+let floridaResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?q=miami&locale=en_US&langid=1033&siteid=300000001', options)
+.then(floridaResponse => floridaResponse.json())
+.then(floridaResponse => {
+  console.log(floridaResponse),
+  floridaHotelApi.innerHTML = `<p>${floridaResponse.q}</p>`
+   floridaHotelApi.innerHTML = `<p>${floridaResponse.sr[3].hotelAddress.street + ". " + floridaResponse.sr[3].hotelAddress.city + ", " + floridaResponse.sr[3].hotelAddress.province}</p>`
+
+
+})
+
+//add js here with query selector or get query by id to post it to the hotel tile
+.catch(err => console.error(err))
+
+
+
+//bali hotel api response
+let baliResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?q=bali&locale=en_US&langid=1033&siteid=300000001', options)
+.then(baliResponse => baliResponse.json())
+.then(baliResponse => {
+  console.log(baliResponse),
+  baliHotelApi.innerHTML = `<p>${baliResponse.q}</p>`
+   baliHotelApi.innerHTML = `<p>${baliResponse.sr[3].hotelAddress.street + ". " + baliResponse.sr[3].hotelAddress.city}</p>`
+
+
+})
+
+//add js here with query selector or get query by id to post it to the hotel tile
+.catch(err => console.error(err))
+
+
 // find clients things to do in location with bored api
 // add api to java script
 // attach api to browser
