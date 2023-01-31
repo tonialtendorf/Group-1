@@ -57,16 +57,16 @@ noHotel.addEventListener("click", (e) => {
 });
 
 // User will be displayed with a travel destination based on their choices
-const bali = document.querySelector(".bali");
+const honolulu = document.querySelector(".honolulu");
 const florida = document.querySelector(".florida");
 const newZealand = document.querySelector(".newZealand");
 const colorado = document.querySelector(".colorado");
 
 warm &&
   luxury.addEventListener("click", function () {
-    console.log("bali");
+    console.log("honolulu");
     florida.classList.add("hidden");
-    bali.classList.remove("hidden");
+    honolulu.classList.remove("hidden");
     newZealand.classList.add("hidden");
     colorado.classList.add("hidden");
     randomApi()
@@ -76,7 +76,7 @@ warm &&
   thrifty.addEventListener("click", function () {
     console.log("florida");
     florida.classList.remove("hidden");
-    bali.classList.add("hidden");
+    honolulu.classList.add("hidden");
     newZealand.classList.add("hidden");
     colorado.classList.add("hidden");
     randomApi()
@@ -86,7 +86,7 @@ cool &&
   luxury.addEventListener("click", function () {
     console.log("New Zealand");
     florida.classList.add("hidden");
-    bali.classList.add("hidden");
+    honolulu.classList.add("hidden");
     newZealand.classList.remove("hidden");
     colorado.classList.add("hidden");
     randomApi()
@@ -96,7 +96,7 @@ cool &&
   thrifty.addEventListener("click", function () {
     console.log("Colorado");
     florida.classList.add("hidden");
-    bali.classList.add("hidden");
+    honolulu.classList.add("hidden");
     newZealand.classList.add("hidden");
     colorado.classList.remove("hidden");
     randomApi()
@@ -106,11 +106,11 @@ cool &&
  const newZealandHotelApi = document.getElementById('newZealandHotel')
  const coloradoHotelApi = document.getElementById('coloradoHotel')
  const floridaHotelApi = document.getElementById('floridaHotel')
- const baliHotelApi = document.getElementById('baliHotel')
+ const honoluluHotelApi = document.getElementById('honoluluHotel')
  
  warm && luxury.addEventListener("click", function() {
    florida.classList.add('hidden')
-   bali.classList.remove('hidden')
+   honolulu.classList.remove('hidden')
    newZealand.classList.add('hidden')
    colorado.classList.add('hidden')
    newZealandHotelApi.classList.add('hidden')
@@ -121,7 +121,7 @@ cool &&
 
  warm && thrifty.addEventListener("click", function() {
   florida.classList.remove('hidden')
-  bali.classList.add('hidden')
+  honolulu.classList.add('hidden')
   newZealand.classList.add('hidden')
   colorado.classList.add('hidden')
   newZealandHotelApi.classList.add('hidden')
@@ -130,7 +130,7 @@ cool &&
 })
  cool && luxury.addEventListener("click", function() {
    florida.classList.add('hidden')
-   bali.classList.add('hidden')
+   honolulu.classList.add('hidden')
    newZealand.classList.remove('hidden')
    colorado.classList.add('hidden')
    newZealandHotelApi.classList.remove('hidden')
@@ -141,7 +141,7 @@ cool &&
 
  cool && thrifty.addEventListener("click", function() {
    florida.classList.add('hidden')
-   bali.classList.add('hidden')
+   honolulu.classList.add('hidden')
    newZealand.classList.add('hidden')
    colorado.classList.remove('hidden')
    coloradoHotelApi.classList.remove('hidden')
@@ -177,7 +177,7 @@ let newZealandResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/sear
 .then(newZealandResponse => {
   console.log(newZealandResponse),
   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.q}</p>`
-   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.sr[8].hotelAddress.street + ". " + newZealandResponse.sr[8].hotelAddress.city}</p>`
+   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.sr[9].hotelAddress.street + ". " + newZealandResponse.sr[9].hotelAddress.city}</p>`
 
 
 })
@@ -203,13 +203,13 @@ let floridaResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?
 
 
 
-//bali hotel api response
-let baliResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?q=bali&locale=en_US&langid=1033&siteid=300000001', options)
-.then(baliResponse => baliResponse.json())
-.then(baliResponse => {
-  console.log(baliResponse),
-  baliHotelApi.innerHTML = `<p>${baliResponse.q}</p>`
-   baliHotelApi.innerHTML = `<p>${baliResponse.sr[3].hotelAddress.street + ". " + baliResponse.sr[3].hotelAddress.city}</p>`
+//honolulu hotel api response
+let honoluluResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/search?q=honolulu&locale=en_US&langid=1033&siteid=300000001', options)
+.then(honoluluResponse => honoluluResponse.json())
+.then(honoluluResponse => {
+  console.log(honoluluResponse),
+  honoluluHotelApi.innerHTML = `<p>${honoluluResponse.q}</p>`
+   honoluluHotelApi.innerHTML = `<p>${honoluluResponse.sr[7].hotelAddress.street + ". " + honoluluResponse.sr[7].hotelAddress.city}</p>`
 
 
 })
