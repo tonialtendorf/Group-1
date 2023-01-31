@@ -6,9 +6,10 @@ body{
 
 .image-resize{
   height: 300px;
-  width: 600px;
-  object-fit: cover;
-  object-position: center center; 
+  width: 1200px;
+  object-position: center;
+  object-fit: contain;
+  
 }
 
 .contact_us{
@@ -16,5 +17,5 @@ body{
 }
 
 .py-1{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
