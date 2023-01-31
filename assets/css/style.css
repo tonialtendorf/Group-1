@@ -12,6 +12,9 @@ body{
 }
 
 .contact_us{
-  text-align: center;
+  text-align: left;
+}
 
+.py-1{
+  background-color: white;
 }
