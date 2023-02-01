@@ -62,6 +62,7 @@ const florida = document.querySelector(".florida");
 const newZealand = document.querySelector(".newZealand");
 const colorado = document.querySelector(".colorado");
 
+
 warm &&
   luxury.addEventListener("click", function () {
     console.log("honolulu");
@@ -154,8 +155,9 @@ cool &&
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '9fab7aca7fmsh4f68b413d6e9d50p1fad2ajsn5b854ca5116d',
+    'X-RapidAPI-Key': 'd1e9c4d63amshea5bc8876b95c99p14cd23jsnccae2b29f053',
     'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+   
   }
 };
 
@@ -177,7 +179,7 @@ let newZealandResponse = fetch('https://hotels4.p.rapidapi.com/locations/v3/sear
 .then(newZealandResponse => {
   console.log(newZealandResponse),
   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.q}</p>`
-   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.sr[9].hotelAddress.street + ". " + newZealandResponse.sr[9].hotelAddress.city}</p>`
+   newZealandHotelApi.innerHTML = `<p>${newZealandResponse.sr[8].hotelAddress.street + ". " + newZealandResponse.sr[8].hotelAddress.city}</p>`
 
 
 })
