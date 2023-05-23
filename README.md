@@ -34,7 +34,7 @@ Wireframe: ![image](https://user-images.githubusercontent.com/117420244/21564856
 Collaborators:
 
 Toni Altendorf https://github.com/tonialtendorf
-Maria Juarez https://github.com/mariaxisabelle
+Maria Juarez https://github.com/maria-ciovacco-juarez
 Taryn Ferraro https://github.com/tferraro517
 Jessie Mullins https://github.com/jessiemullins
 
